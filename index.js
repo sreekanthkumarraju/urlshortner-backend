@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express=require('express')
 const app=express()
 const bodyParser=require('body-parser')
@@ -29,6 +30,6 @@ db.on("error",console.error.bind(console,"connection error"))
 db.once("open",function(){
     console.log('connected successfully')
 })
-app.listen(process.env.PORT||PORT,()=>{
+app.listen(process.env.PORT || PORT,()=>{
     console.log('listen to port',PORT)
 })

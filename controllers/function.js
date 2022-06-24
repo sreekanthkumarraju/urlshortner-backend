@@ -1,8 +1,5 @@
 require('dotenv').config()
-const express=require('express')
-const router=express.Router
 const userModel=require('../models/mongoose')
-const crypto=require('crypto')
 const {hashPassword}=require('../authentication/auth')
 let bcrypt=require('bcrypt')
 const sendMail = require('../utils/sendmail')

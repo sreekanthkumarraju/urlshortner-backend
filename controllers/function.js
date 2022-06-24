@@ -285,4 +285,4 @@ const verifyUserEmail=async (req,res)=>{
     return jwt.sign(payload, process.env.ACCESS_TOKEN_SECRET, {expiresIn: '30m'})
 }
 
-module.exports={StoreUserInfo, verifyLogin,verifyUserEmail,activateEmail,verifyToken,resetPassword}
+module.exports={StoreUserInfo,verifyLogin,verifyUserEmail,activateEmail,verifyToken,resetPassword}

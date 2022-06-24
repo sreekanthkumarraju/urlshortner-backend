@@ -27,6 +27,6 @@ db.on("error",console.error.bind(console,"connection error"))
 db.once("open",function(){
     console.log('connected successfully')
 })
-app.listen(process.env.PORT || 5000,'0.0.0.0',()=>{
+app.listen(process.env.PORT || 5000,()=>{
     console.log('listen to port')
 })

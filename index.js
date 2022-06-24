@@ -22,7 +22,7 @@ mongoose.connect(URL,{
     useUnifiedTopology:true
 })
 
-const PORT=5080
+
 const db=mongoose.connection;
 
 db.on("error",console.error.bind(console,"connection error"))
@@ -30,6 +30,6 @@ db.on("error",console.error.bind(console,"connection error"))
 db.once("open",function(){
     console.log('connected successfully')
 })
-app.listen(process.env.PORT || PORT,()=>{
-    console.log('listen to port',PORT)
+app.listen(process.env.PORT || 5080,()=>{
+    console.log('listen to port',5080)
 })

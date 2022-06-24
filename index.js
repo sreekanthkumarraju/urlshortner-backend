@@ -8,6 +8,8 @@ const router=require('./routes/routes')
 const mongoose =require('mongoose')
 app.use(cors())
 app.use(express.json())
+
+const port=5080
 app.use('/',router)
 
 
@@ -27,6 +29,6 @@ db.on("error",console.error.bind(console,"connection error"))
 db.once("open",function(){
     console.log('connected successfully')
 })
-app.listen(process.env.PORT || 5000,()=>{
-    console.log('listen to port')
+app.listen(process.env.PORT||port,()=>{
+    console.log('listen to port',port)
 })

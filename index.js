@@ -31,5 +31,5 @@ db.once("open",function(){
     console.log('connected successfully')
 })
 app.listen(process.env.PORT || 5080,()=>{
-    console.log('listen to port',5080)
+    console.log('listen to port')
 })

@@ -7,7 +7,7 @@ const router=require('./routes/routes')
 
 const mongoose =require('mongoose')
 app.use(cors())
-app.use(express.json())
+app.use(bodyParser.json())
 
 const port=5080
 app.use('/',router)

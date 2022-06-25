@@ -29,6 +29,7 @@ db.on("error",console.error.bind(console,"connection error"))
 db.once("open",function(){
     console.log('connected successfully')
 })
+
 app.listen(process.env.PORT||port,()=>{
-    console.log('listen to port',port)
+    console.log('server is running on port',port)
 })

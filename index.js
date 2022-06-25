@@ -9,7 +9,7 @@ const mongoose =require('mongoose')
 app.use(cors())
 app.use(bodyParser.json())
 
-const port=5080
+
 app.use('/',router)
 
 
@@ -30,6 +30,6 @@ db.once("open",function(){
     console.log('connected successfully')
 })
 
-app.listen(process.env.PORT||port,()=>{
-    console.log('server is running on port',port)
-})
+app.listen(process.env.PORT || 3000, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+  });

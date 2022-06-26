@@ -44,6 +44,7 @@ const StoreUserInfo=async (req,res)=>{
  
         }
 
+        
 const  verifyLogin=async (req,res)=>{
     let user=await userModel.findOne({email:req.body.email})
     
@@ -139,7 +140,7 @@ const activateEmail=async (req,res)=>{
    
 }
 
-const verifyUserEmail=async (req,res)=>{
+const verifyEmail=async (req,res)=>{
 
     let user=await userModel.findOne({email:req.body.email})
 
@@ -285,4 +286,4 @@ const verifyUserEmail=async (req,res)=>{
     return jwt.sign(payload, process.env.ACCESS_TOKEN_SECRET, {expiresIn: '30m'})
 }
 
-module.exports={StoreUserInfo,verifyLogin,verifyUserEmail,activateEmail,verifyToken,resetPassword}
+module.exports={StoreUserInfo,verifyLogin,verifyEmail,activateEmail,verifyToken,resetPassword}

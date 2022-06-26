@@ -1,5 +1,4 @@
 const express=require('express')
-
 const router=express.Router()
 const {shorten}=require('../URL_shortner_service/url')
 const {redirect}=require('../URL_shortner_service/redirect')

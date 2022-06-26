@@ -16,7 +16,7 @@ app.use('/',router)
 let dbName='RegisterUser'
 let URL=`mongodb+srv://sreekanth:mJAbpJRJk3WqzCAX@cluster0.4pr0n.mongodb.net/${dbName}`
 
-const port=process.env.PORT || 3000
+const port=process.env.PORT||5080 
 
 mongoose.connect(URL,{
     useNewUrlParser:true,

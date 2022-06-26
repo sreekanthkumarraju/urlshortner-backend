@@ -34,5 +34,5 @@ db.once("open",function(){
 
 
 app.listen(port, function(){
-    console.log("Express server listening on port %d in %s mode", port);
+    console.log("Express server listening on port ", port);
   });

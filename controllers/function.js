@@ -1,7 +1,6 @@
 require('dotenv').config()
 const userModel=require('../models/mongoose')
 const {hashPassword}=require('../authentication/auth')
-let bcrypt=require('bcrypt')
 const sendMail = require('../utils/sendmail')
 const jwt=require('jsonwebtoken')
 

@@ -17,7 +17,7 @@ app.use('/',router)
 let dbName='RegisterUser'
 let URL=`mongodb+srv://sreekanth:mJAbpJRJk3WqzCAX@cluster0.4pr0n.mongodb.net/${dbName}`
 
- 
+ let port=process.env.PORT ||5080
 
 mongoose.connect(URL,{
     useNewUrlParser:true,
@@ -34,6 +34,6 @@ db.once("open",function(){
 })
 
 
-app.listen(process.env.PORT, function(){
-    console.log("Express server listening on port ");
+app.listen(port, function(){
+    console.log("Express server listening on port ",port);
   });
